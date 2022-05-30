@@ -15,7 +15,7 @@ jobs:
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
     - name: Push docker images
       run: |
-        docker tag krpc/astrobee:base-latest-ubuntu20.04 ghcr.io/${{ github.repository_owner }}/astrobee-krpc:base-latest-ubuntu20.04
+        docker tag krpc/astrobee:base-latest-ubuntu20.04 ghcr.io/${{ github.repository_owner }}/astrobee-krpc:latest-base-ubuntu20.04
         docker push ghcr.io/${{ github.repository_owner }}/astrobee-krpc:latest-base-ubuntu20.04
 
         docker tag krpc/astrobee:latest-ubuntu20.04 ghcr.io/${{ github.repository_owner }}/astrobee-krpc:latest-ubuntu20.04
